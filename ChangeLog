@@ -1,3 +1,13 @@
+2016-03-03, Version 0.12.12 (LTS), @rvagg
+
+Notable changes:
+
+* openssl: Remove SSLv2 support, the `--enable-ssl2` command line argument will now produce an error. The DROWN Attack (https://drownattack.com/) creates a vulnerability where SSLv2 is enabled by a server, even if a client connection is not using SSLv2. The SSLv2 protocol is widely considered unacceptably broken and should not be supported. More information is available at https://www.openssl.org/news/vulnerabilities.html#2016-0800
+
+Commits:
+
+* [dbfc9d9241] - crypto,tls: remove SSLv2 support (Ben Noordhuis) https://github.com/nodejs/node/pull/5536
+
 2016-03-03, Version 0.12.11 (LTS), @rvagg
 
 Notable changes:
