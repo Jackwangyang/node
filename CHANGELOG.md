@@ -1,5 +1,19 @@
 # Node.js ChangeLog
 
+## 2016-03-07, Version 5.7.2 (Stable). @TheAlphaNerd
+
+### Notable changes
+
+* **http_parser**:
+  * revert d77c3bf204 which was causing errors inside of http client callbacks to not propagate.
+* **path**:
+  * a fix to a regression found in path.resolve for absolute paths with a single character name as the root directory (Evan Lucas) [#5589](https://github.com/nodejs/node/pull/5589)
+  
+### Commits
+
+* [[`38e134435e`](https://github.com/nodejs/node/commit/38e134435e)] - **http_parser**: revert d77c3bf204 (Myles Borins)
+* [[`d9aa699f69`](https://github.com/nodejs/node/commit/d9aa699f69)] - **path**: fix normalize for absolutes (Evan Lucas) [#5589](https://github.com/nodejs/node/pull/5589)
+
 ## 2016-03-02, Version 5.7.1 (Stable), @Fishrock123
 
 ### Notable changes
